@@ -18,7 +18,7 @@ const Login = async () => {
     return redirect("/");
   }
   return (
-    <section className="h-screen grid place-items-center">
+    <section className="h-screen grid place-items-center px-4">
       <div className="space-y-4">
         <div className="w-full text-center">
           <Link
