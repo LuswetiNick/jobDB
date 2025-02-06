@@ -2,6 +2,7 @@
 import { useState } from "react";
 import UserTypeSelection from "./user-type";
 import CompanyForm from "./company-form";
+import JobSeekerForm from "./job-seeker-form";
 
 type UserType = "company" | "jobSeeker" | null;
 
@@ -19,11 +20,7 @@ const OnboardingForm = () => {
         return <UserTypeSelection onSelect={handleUserTypeSelection} />;
 
       case 2:
-        return userType === "company" ? (
-          <CompanyForm />
-        ) : (
-          <p>User is a job seeker</p>
-        );
+        return userType === "company" ? <CompanyForm /> : <JobSeekerForm />;
       default:
         return null;
     }
